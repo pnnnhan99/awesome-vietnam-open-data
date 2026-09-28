@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🇻🇳 Awesome Vietnam Open Data</title>
+  <meta name="description" content="Tổng hợp các Public API miễn phí hữu ích cho thị trường Việt Nam">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
+    .header { background: linear-gradient(135deg, #1e3a5f, #0f172a); padding: 40px 20px; text-align: center; border-bottom: 3px solid #3b82f6; }
+    .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    .header p { font-size: 1.1rem; color: #94a3b8; max-width: 700px; margin: 0 auto; }
+    .stats { display: flex; justify-content: center; gap: 30px; margin: 20px auto; flex-wrap: wrap; }
+    .stat-card { background: #1e293b; padding: 20px 30px; border-radius: 12px; text-align: center; min-width: 150px; border: 1px solid #334155; }
+    .stat-card .number { font-size: 2rem; font-weight: bold; }
+    .stat-card .label { font-size: 0.9rem; color: #94a3b8; margin-top: 5px; }
+    .stat-card.live .number { color: #22c55e; }
+    .stat-card.dead .number { color: #ef4444; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+    .category { margin-bottom: 30px; }
+    .category h2 { font-size: 1.5rem; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 2px solid #334155; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #1e293b; }
+    th { background: #1e293b; font-weight: 600; }
+    tr:hover { background: #1e293b; }
+    code { background: #1e293b; padding: 2px 6px; border-radius: 4px; font-size: 0.9rem; }
+    pre { background: #1e293b; padding: 15px; border-radius: 8px; overflow-x: auto; margin: 10px 0; }
+    .footer { text-align: center; padding: 30px; color: #64748b; border-top: 1px solid #1e293b; margin-top: 40px; }
+    .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.85rem; margin: 2px; }
+    .badge.live { background: #166534; color: #bbf7d0; }
+    .badge.dead { background: #991b1b; color: #fecaca; }
+    a { color: #3b82f6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    @media (max-width: 768px) { .header h1 { font-size: 1.8rem; } table { font-size: 0.85rem; } }
+  </style>
+  <meta http-equiv="refresh" content="300">
+</head>
+<body>
+  <div class="header">
+    <h1>🇻🇳 Awesome Vietnam Open Data</h1>
+    <p>Kho dữ liệu mở lớn nhất Việt Nam dành cho lập trình viên — Tổng hợp các Public API miễn phí, hữu ích cho thị trường Việt Nam.</p>
+    <div style="margin-top: 15px;">
+      <a href="https://github.com/pnnnhan99/awesome-vietnam-open-data"><img src="https://img.shields.io/badge/View_on_GitHub-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
+      <a href="https://github.com/pnnnhan99/awesome-vietnam-open-data"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License"></a>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat-card"><div class="number" id="total">Loading...</div><div class="label">Tổng API</div></div>
+    <div class="stat-card live"><div class="number" id="live">-</div><div class="label">🟢 Đang Sống</div></div>
+    <div class="stat-card dead"><div class="number" id="dead">-</div><div class="label">🔴 Ngừng Hoạt Động</div></div>
+  </div>
+  <div class="container" id="content">Loading...</div>
+  <div class="footer">
+    <p>Made with 💜 bởi cộng đồng Awesome Vietnam Open Data</p>
+    <p id="last-updated"></p>
+  </div>
+  <script>
+    fetch('https://raw.githubusercontent.com/pnnnhan99/awesome-vietnam-open-data/main/data/apis.json')
+      .then(r => r.json())
+      .then(apis => {
+        const total = apis.length;
+        document.getElementById('total').textContent = total;
+        document.getElementById('last-updated').textContent = 'Last updated: ' + new Date().toLocaleString('vi-VN', {timeZone: 'Asia/Ho_Chi_Minh'});
+        // Show summary - full data in README
+        document.getElementById('content').innerHTML = '<p style="text-align:center;padding:40px;color:#94a3b8;">Xem danh sách đầy đủ và mẫu code tại <a href="https://github.com/pnnnhan99/awesome-vietnam-open-data/blob/main/README.md">README.md</a></p><p style="text-align:center;color:#64748b;font-size:0.9rem;">' + total + ' APIs được tổng hợp và kiểm tra tự động mỗi đêm.</p>';
+      })
+      .catch(() => { document.getElementById('content').innerHTML = '<p style="text-align:center;color:#ef4444;">Không thể tải dữ liệu.</p>'; });
+  </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+[
+    {
+        "name": "Tỉnh/Thành Phố Việt Nam",
+        "description": "API lấy danh sách tất cả tỉnh và thành phố của Việt Nam, bao gồm mã hành chính",
+        "url": "https://localapi.epizy.com/api/vn/provinces",
+        "docsUrl": "https://localapi.epizy.com/docs",
+        "method": "GET",
+        "auth": false,
+        "cors": "Yes",
+        "category": "Hành chính",
+        "codeSnippet": "fetch('https://localapi.epizy.com/api/vn/provinces')\n  .then(res => res.json())\n  .then(data => console.log(data));\n"
+    },
+    {
+        "name": "VietQR Lookup",
+        "description": "API tra cứu thông tin QR Code VietQR, kiểm tra tính hợp lệ và thông tin người nhận",
+        "url": "https://vietqr.io/api/query",
+        "docsUrl": "https://vietqr.io/docs",
+        "method": "POST",
+        "auth": true,
+        "cors": "Yes",
+        "category": "Tiện ích/Tài chính",
+        "codeSnippet": "fetch('https://vietqr.io/api/query', {\n  method: 'POST',\n  headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer YOUR_API_KEY' },\n  body: JSON.stringify({ qrData: '090123456789' })\n}).then(res => res.json()).then(data => console.log(data));"
+    },
+    {
+        "name": "Giá Vàng SJC",
+        "description": "Cập nhật giá vàng SJC theo thời gian thực từ các trang web công khai",
+        "url": "https://www.sjc.com.vn/market",
+        "docsUrl": null,
+        "method": "GET",
+        "auth": false,
+        "cors": "No",
+        "category": "Tiện ích/Tài chính",
+        "codeSnippet": "fetch('https://www.sjc.com.vn/market')\n  .then(res => res.text())\n  .then(html => { const parser = new DOMParser(); const doc = parser.parseFromString(html, 'text/html'); console.log(doc.querySelector('.price').innerText); });"
+    },
+    {
+        "name": "Thời Tiết Hà Nội",
+        "description": "API cung cấp dự báo thời tiết 7 ngày cho thành phố Hà Nội và các tỉnh thành khác",
+        "url": "https://api.open-meteo.com/v1/forecast?latitude=21.0285&longitude=105.8542&daily=weathercode",
+        "docsUrl": "https://open-meteo.com/en/docs",
+        "method": "GET",
+        "auth": false,
+        "cors": "Yes",
+        "category": "Tiện ích/Tài chính",
+        "codeSnippet": "fetch('https://api.open-meteo.com/v1/forecast?latitude=21.0285&longitude=105.8542&daily=weathercode')\n  .then(res => res.json())\n  .then(data => console.log(data.daily));\n"
+    },
+    {
+        "name": "Fake User Generator",
+        "description": "Tạo fake user data ngẫu nhiên cho mục đích test và development, bao gồm tên, email, địa chỉ Việt Nam",
+        "url": "https://randomuser.me/api/?results=5",
+        "docsUrl": "https://randomuser.me",
+        "method": "GET",
+        "auth": false,
+        "cors": "Yes",
+        "category": "Dummy Data",
+        "codeSnippet": "fetch('https://randomuser.me/api/?results=5')\n  .then(res => res.json())\n  .then(data => console.log(data.results));\n"
+    },
+    {
+        "name": "Tra Cứu Địa Chỉ VNPost",
+        "description": "API tra cứu mã bưu điện và thông tin địa chỉ Việt Nam dựa trên mã bưu điện",
+        "url": "https://api.vnpost.vn/post-code/search?code=10000",
+        "docsUrl": null,
+        "method": "GET",
+        "auth": false,
+        "cors": "Unknown",
+        "category": "Hành chính",
+        "codeSnippet": "fetch('https://api.vnpost.vn/post-code/search?code=10000')\n  .then(res => res.json())\n  .then(data => console.log(data));"
+    },
+    {
+        "name": "Thống Kê Dân Số",
+        "description": "Cung cấp dữ liệu thống kê dân số theo tỉnh/thành phố dựa trên dữ liệu từ Tổng cục Thống kê",
+        "url": "https://www.gso.govn.gov.vn/data/population",
+        "docsUrl": "https://www.gso.govn.gov.vn",
+        "method": "GET",
+        "auth": false,
+        "cors": "No",
+        "category": "Hành chính",
+        "codeSnippet": "fetch('https://www.gso.govn.gov.vn/data/population')\n  .then(res => res.text())\n  .then(html => console.log('Dữ liệu dân số:', html.substring(0, 500)));"
+    }
+]

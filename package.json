@@ -1,0 +1,23 @@
+{
+    "name": "awesome-vietnam-open-data",
+    "version": "1.0.0",
+    "description": "Tổng hợp các Public API miễn phí hữu ích cho thị trường Việt Nam",
+    "main": "scripts/build-readme.js",
+    "scripts": {
+        "build": "node scripts/build-readme.js",
+        "start": "node scripts/build-readme.js"
+    },
+    "keywords": [
+        "vietnam",
+        "api",
+        "open-data",
+        "awesome-list",
+        "vietnamese-apis"
+    ],
+    "author": "Awesome Vietnam Open Data Community",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^1.7.2",
+        "chalk": "^4.1.2"
+    }
+}

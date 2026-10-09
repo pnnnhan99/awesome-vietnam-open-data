@@ -1,8 +1,8 @@
 # 🇻🇳 Awesome Vietnam Open Data
 
 [![Total APIs](https://img.shields.io/badge/Total_APIs-7-blue?style=for-the-badge)](https://github.com/awesome-vietnam-open-data/awesome-vietnam-open-data)
-[![Live APIs](https://img.shields.io/badge/Live_APIs-1-brightgreen?style=for-the-badge)](https://github.com/awesome-vietnam-open-data/awesome-vietnam-open-data)
-[![Dead APIs](https://img.shields.io/badge/Dead_APIs-6-red?style=for-the-badge)](https://github.com/awesome-vietnam-open-data/awesome-vietnam-open-data)
+[![Live APIs](https://img.shields.io/badge/Live_APIs-2-brightgreen?style=for-the-badge)](https://github.com/awesome-vietnam-open-data/awesome-vietnam-open-data)
+[![Dead APIs](https://img.shields.io/badge/Dead_APIs-5-red?style=for-the-badge)](https://github.com/awesome-vietnam-open-data/awesome-vietnam-open-data)
 [![Auto Update](https://img.shields.io/badge/Auto_Update-Active-purple?style=for-the-badge&logo=github-actions)](https://github.com/awesome-vietnam-open-data/awesome-vietnam-open-data)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
@@ -15,9 +15,9 @@
 | Metric | Value |
 |---|---|
 | Total APIs | 7 |
-| 🟢 Alive | 1 |
-| 🔴 Dead | 6 |
-| Last Updated | 10/9/2026, 4:52:50 AM (GMT+7) |
+| 🟢 Alive | 2 |
+| 🔴 Dead | 5 |
+| Last Updated | 10/10/2026, 4:30:46 AM (GMT+7) |
 
 ---
 
@@ -69,7 +69,7 @@ fetch('https://www.gso.govn.gov.vn/data/population')
 |---|---|---|---|---|
 | VietQR Lookup | VietQR lookup API, validates QR code and retrieves recipi... | 🔴 Chết | 🔑 Cần | Yes |
 | Giá Vàng SJC | Real-time SJC gold prices from public websites | 🔴 Chết | 🔓 Không | No |
-| Thời Tiết Hà Nội | 7-day weather forecast API for Hanoi and other provinces | 🔴 Chết | 🔓 Không | Yes |
+| Thời Tiết Hà Nội | 7-day weather forecast API for Hanoi and other provinces | 🟢 Sống | 🔓 Không | Yes |
 
 #### 💻 Quick Integration Code
 
@@ -145,5 +145,5 @@ fetch('https://randomuser.me/api/?results=5')
 </p>
 
 <p align="center">
-  🕐 Last updated: 10/9/2026, 4:52:50 AM
+  🕐 Last updated: 10/10/2026, 4:30:46 AM
 </p>

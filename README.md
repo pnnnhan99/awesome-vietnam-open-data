@@ -17,7 +17,7 @@
 | Total APIs | 7 |
 | 🟢 Alive | 2 |
 | 🔴 Dead | 5 |
-| Last Updated | 10/10/2026, 4:30:46 AM (GMT+7) |
+| Last Updated | 10/11/2026, 3:31:44 AM (GMT+7) |
 
 ---
 
@@ -145,5 +145,5 @@ fetch('https://randomuser.me/api/?results=5')
 </p>
 
 <p align="center">
-  🕐 Last updated: 10/10/2026, 4:30:46 AM
+  🕐 Last updated: 10/11/2026, 3:31:44 AM
 </p>

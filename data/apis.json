@@ -75,5 +75,49 @@
         "cors": "No",
         "category": "Hành chính",
         "codeSnippet": "fetch('https://www.gso.govn.gov.vn/data/population')\n  .then(res => res.text())\n  .then(html => console.log('Dữ liệu dân số:', html.substring(0, 500)));"
+    },
+    {
+        "name": "Provinces Open API",
+        "description": "Danh sách tỉnh/thành phố và phường/xã Việt Nam theo đơn vị hành chính mới (v2), có mã hành chính, loại đơn vị và mã vùng điện thoại",
+        "url": "https://provinces.open-api.vn/api/v2/p/",
+        "docsUrl": "https://provinces.open-api.vn/",
+        "method": "GET",
+        "auth": false,
+        "cors": "Yes",
+        "category": "Hành chính",
+        "codeSnippet": "fetch('https://provinces.open-api.vn/api/v2/p/')\n  .then(res => res.json())\n  .then(data => console.log(data));\n"
+    },
+    {
+        "name": "VietQR Danh Sách Ngân Hàng",
+        "description": "Danh sách ngân hàng Việt Nam kèm mã BIN, tên viết tắt, logo và cờ hỗ trợ chuyển khoản qua VietQR",
+        "url": "https://api.vietqr.io/v2/banks",
+        "docsUrl": "https://www.vietqr.io/danh-sach-api/",
+        "method": "GET",
+        "auth": false,
+        "cors": "Yes",
+        "category": "Tiện ích/Tài chính",
+        "codeSnippet": "fetch('https://api.vietqr.io/v2/banks')\n  .then(res => res.json())\n  .then(data => console.log(data.data));\n"
+    },
+    {
+        "name": "VietQR Tra Cứu Doanh Nghiệp",
+        "description": "Tra cứu tên và địa chỉ doanh nghiệp Việt Nam theo mã số thuế",
+        "url": "https://api.vietqr.io/v2/business/0100109106",
+        "docsUrl": "https://www.vietqr.io/danh-sach-api/",
+        "method": "GET",
+        "auth": false,
+        "cors": "Yes",
+        "category": "Tiện ích/Tài chính",
+        "codeSnippet": "fetch('https://api.vietqr.io/v2/business/0100109106')\n  .then(res => res.json())\n  .then(data => console.log(data.data));\n"
+    },
+    {
+        "name": "Ngày Lễ Việt Nam (Nager.Date)",
+        "description": "Danh sách ngày lễ chính thức của Việt Nam theo năm, gồm cả Tết âm lịch, trả về JSON",
+        "url": "https://date.nager.at/api/v3/PublicHolidays/2026/VN",
+        "docsUrl": "https://date.nager.at/swagger/index.html",
+        "method": "GET",
+        "auth": false,
+        "cors": "Yes",
+        "category": "Tiện ích/Tài chính",
+        "codeSnippet": "fetch('https://date.nager.at/api/v3/PublicHolidays/2026/VN')\n  .then(res => res.json())\n  .then(data => console.log(data));\n"
     }
 ]
